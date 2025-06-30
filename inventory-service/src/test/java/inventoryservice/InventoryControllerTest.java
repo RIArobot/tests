@@ -21,6 +21,13 @@ class InventoryControllerTest {
 
     @Test
     void getInventory_ValidProduct_ReturnsInventory() {
-
+        given()
+                .pathParam("productId", "1")
+                .when()
+                .get("/api/inventory/{productId}")
+                .then()
+                .statusCode(200)
+                .body("productId", equalTo("1"))
+                .body("quantity", equalTo(100));
     }
 }
