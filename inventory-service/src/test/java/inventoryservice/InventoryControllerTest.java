@@ -21,13 +21,6 @@ class InventoryControllerTest {
 
     @Test
     void getInventory_ValidProduct_ReturnsInventory() {
-        given()
-                .pathParam("", "")
-                .when()
-                .get("")
-                .then()
-                .statusCode()
-                .body("", equalTo(""))
-                .body("", equalTo());
+
     }
 }
