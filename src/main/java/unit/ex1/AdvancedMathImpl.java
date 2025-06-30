@@ -1,6 +1,6 @@
 package unit.ex1;
 
-class AdvancedMathImpl implements AdvancedMath {
+public class AdvancedMathImpl implements AdvancedMath {
     @Override
     public double power(double base, double exponent) {
         return Math.pow(base, exponent);

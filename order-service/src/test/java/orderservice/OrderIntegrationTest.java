@@ -39,13 +39,13 @@ class OrderIntegrationTest {
     @Test
     void createOrder_IntegrationWithInventoryService_ReturnsOrder() {
         given()
-                .contentType("")
-                .body("")
+                .contentType("application/json")
+                .body("{ \"productId\": \"1\", \"quantity\": 3 }")
                 .when()
-                .post("")
+                .post("/api/orders")
                 .then()
-                .statusCode()
-                .body("", equalTo(""))
-                .body("", equalTo());
+                .statusCode(200)
+                .body("productId", equalTo("1"))
+                .body("completed", equalTo(true));
     }
 }
