@@ -1,0 +1,7 @@
+server:
+  port: 8080
+
+# URL InventoryService (переопределяется в тестах через @DynamicPropertySource)
+inventory:
+  service:
+    url: http://localhost:8081
